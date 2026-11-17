@@ -26,4 +26,4 @@ export const ADMIN_USERNAME = "tr3nd_br";
 export const isMockApiConfigured = () => !MOCKAPI_BASE_URL.includes("SEU_ID_DO_PROJETO");
 
 // Servidor WebSocket do modo Online (precisa começar com "wss://").
-export const ONLINE_WS_URL = import.meta.env?.VITE_ONLINE_WS_URL || "wss://number-70is.onrender.com";
+export const ONLINE_WS_URL = import.meta.env?.VITE_ONLINE_WS_URL || "wss://numeros-1.onrender.com";

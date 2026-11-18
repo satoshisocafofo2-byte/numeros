@@ -31,6 +31,9 @@ function getClient() {
   return client;
 }
 
+// Em ilike, "_" e "%" são curingas; escapamos para comparar o nome literalmente.
+const escapeLike = (text) => text.replace(/[\\%_]/g, (c) => "\\" + c);
+
 export async function getTopScores(limit = 20) {
   const supabase = getClient();
   if (!supabase) return null; // Supabase ainda não conectado neste projeto Vercel
@@ -55,7 +58,8 @@ export async function submitScore(name, score) {
   const { data: existing, error: selectErr } = await supabase
     .from(TABLE)
     .select("id, score")
-    .ilike("name", name)
+    .ilike("name", escapeLike(name))
+    .limit(1)
     .maybeSingle();
   if (selectErr) throw selectErr;
 

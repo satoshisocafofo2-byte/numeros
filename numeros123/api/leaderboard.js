@@ -12,6 +12,8 @@ export default async function handler(req, res) {
     }
     res.status(200).json(scores);
   } catch (err) {
-    res.status(500).json({ ok: false, error: "Erro ao carregar o ranking." });
+    console.error("leaderboard error:", err);
+    const detail = err && err.message ? ` (${err.message})` : "";
+    res.status(500).json({ ok: false, error: `Erro ao carregar o ranking${detail}` });
   }
 }

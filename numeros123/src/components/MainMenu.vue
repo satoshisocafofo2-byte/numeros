@@ -12,7 +12,7 @@ const { user, isAdmin } = useAuth();
   <section id="screen-menu" class="screen active">
     <div class="bg-glow"></div>
     <div class="card">
-      <h1 class="title">Números em Duelo</h1>
+      <h1 class="title">Number Marge</h1>
       <p class="subtitle">Encaixe, funda e resista à pressão do adversário</p>
 
       <p class="user-line">

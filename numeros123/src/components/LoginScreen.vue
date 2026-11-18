@@ -60,7 +60,7 @@ async function submit() {
   <section class="screen active">
     <div class="bg-glow"></div>
     <form class="card login-card" novalidate @submit.prevent="submit">
-      <h1 class="title">Números em Duelo</h1>
+      <h1 class="title">Number Marge</h1>
       <p class="subtitle">{{ mode === "login" ? "Entre na sua conta" : "Crie sua conta" }}</p>
 
       <div class="form-field">

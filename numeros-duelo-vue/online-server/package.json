@@ -1,0 +1,16 @@
+{
+  "name": "numeros-duelo-online-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Relay WebSocket do modo Online de Números em Duelo (placar/combo/fim de jogo entre dois navegadores).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20.0.0 <25.0.0"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
